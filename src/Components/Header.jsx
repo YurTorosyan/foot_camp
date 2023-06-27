@@ -3,7 +3,7 @@ import logo from "../assets/logo.png"
 import { NavLink } from "react-router-dom"
 import "./Header.scss"
 import {
-  faHouse,
+  faFutbol,
   faPeopleGroup,
   faStreetView,
   faTrophy,
@@ -15,12 +15,14 @@ export default function Header() {
       <div className="header__container">
         <div className="header__wrap">
           <div className="header__logo">
-            <img src={logo} alt="LOGO" />
+            <NavLink to="/">
+              <img src={logo} alt="LOGO" />
+            </NavLink>
           </div>
           <nav className="header__nav">
-            <NavLink className="header__link" to="/">
-              <FontAwesomeIcon icon={faHouse} />
-              <p>Home</p>
+            <NavLink className="header__link" to="/fixtures">
+              <FontAwesomeIcon icon={faFutbol} />
+              <p>Fixtures</p>
             </NavLink>
             <NavLink className="header__link" to="/leagues">
               <FontAwesomeIcon icon={faTrophy} />

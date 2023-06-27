@@ -8,7 +8,9 @@
 
 :root {
   --primary-color: #467cf0;
+  --third-color: #141522;
   --secondary-color: #21253c;
+  --border-color: #3b436d;
   --bg-color: #0a0a10;
   --text-color: #e1eaff;
 }
@@ -25,7 +27,7 @@ body {
 }
 
 [class$="__container"] {
-  max-width: 1440px;
+  max-width: 1420px;
   padding: 0px 20px;
   margin: 0 auto;
 }

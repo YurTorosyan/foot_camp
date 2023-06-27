@@ -1,0 +1,158 @@
+// * {
+//   border: 1px solid red;
+// }
+.fixtures {
+  padding: 15px 0px;
+  &__container {
+  }
+
+  &__items {
+    background-color: var(--third-color);
+    border: 1px solid var(--border-color);
+    border-top: none;
+    border-radius: 15px;
+    margin-bottom: 30px;
+  }
+  &__wrapper {
+    padding: 10px 25px;
+
+    display: flex;
+    // justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    gap: 10px;
+  }
+  &__league {
+    cursor: pointer;
+    display: flex;
+    gap: 15px;
+    align-items: center;
+    padding: 5px;
+    border-radius: 15px 15px 0px 0px;
+    background-color: var(--text-color);
+    color: var(--bg-color);
+    position: relative;
+    img {
+      width: 50px;
+      height: 50px;
+      object-fit: contain;
+    }
+    span {
+      font-size: 20px;
+      font-weight: 700;
+      background-color: var(--bg-color);
+      color: var(--text-color);
+      padding: 5px 10px;
+      border-radius: 10%;
+      position: absolute;
+      top: 50%;
+      right: 25px;
+      transform: translateY(-50%);
+    }
+  }
+
+  &__league-name {
+    font-size: 21px;
+  }
+
+  &__item {
+    background-color: var(--secondary-color);
+    border: 1px solid var(--border-color);
+    border-radius: 10px;
+    min-width: 97%;
+    box-shadow: rgba(0, 0, 0, 0.15) 0px 3px 3px 0px;
+  }
+
+  &__general {
+    padding: 10px 0px;
+  }
+
+  &__table {
+    display: grid;
+    grid-template-columns: 1fr 3fr 1fr;
+    grid-template-rows: repeat(2, 1fr);
+    grid-column-gap: 0px;
+    grid-row-gap: 0px;
+  }
+  &__home,
+  &__away {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    p {
+      font-size: 22px;
+    }
+    img {
+      width: 150px;
+      aspect-ratio: 1;
+      object-fit: contain;
+    }
+  }
+  &__home {
+    grid-area: 1 / 1 / 3 / 2;
+  }
+  &__away {
+    grid-area: 1 / 3 / 3 / 4;
+  }
+
+  &__start-time {
+    font-size: 30px;
+  }
+
+  &__score {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 15px;
+    grid-area: 1 / 2 / 2 / 3;
+    span {
+      font-size: 30px;
+    }
+  }
+
+  &__score-home {
+  }
+
+  &__score-away {
+  }
+
+  &__away {
+  }
+
+  &__aditional {
+    grid-area: 2 / 2 / 3 / 3;
+    display: flex;
+    justify-content: center;
+    gap: 50px;
+    padding-top: 10px;
+  }
+
+  &__info {
+    display: flex;
+    gap: 5px;
+    align-items: center;
+  }
+}
+[aria-hidden="false"] {
+  animation: showPanel 250ms ease-in backwards;
+  transform-origin: top;
+}
+@keyframes showPanel {
+  0% {
+    transform: scaleY(0);
+  }
+  100% {
+    transform: scaleY(1);
+  }
+}
+
+.home-win {
+  color: var(--primary-color);
+  font-weight: 700;
+}
+.away-win ~ .fixtures__score-away {
+  color: var(--primary-color);
+  font-weight: 700;
+}
